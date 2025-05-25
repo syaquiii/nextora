@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import { sfProDisplay } from "@/shared/utils/font";
 import Navbar from "@/shared/components/Navbar";
+import { ProductProvider } from "@/shared/Context/ProductsContext";
 import Footer from "@/shared/components/Footer";
+
 
 export const metadata: Metadata = {
   title: "Nextora",
@@ -17,10 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased ${sfProDisplay.variable}`}>
-        <Navbar />
-        {children}
 
-        <Footer/>
+        <ProductProvider>
+          <Navbar />
+          {children}
+          <Footer/>
+        </ProductProvider>
+
+ 
       </body>
     </html>
   );
