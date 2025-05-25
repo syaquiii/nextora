@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "tailwindcss";
+@theme {
+  --font-sfpro: "sfpro", sans-serif;
+
+  /* Primary color palette */
+  --color-primary: ;
+  --color-primary-50: #f8f8f8;
+  --color-primary-100: #d7d7d7;
+  --color-primary-200: #bcbdbd;
+  --color-primary-300: #9a9b9c;
+  --color-primary-400: #787a7b;
+  --color-primary-500: #57595a;
+  --color-primary-600: #353839;
+  --color-primary-700: #2a2b2c;
+  --color-primary-800: #1f2021;
+  --color-primary-900: #141516;
+  --color-primary-950: #0a0a0b;
+}
+
+.mycontainer {
+  @apply container mx-auto top-0 left-0 right-0 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 transition-all;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = () => {
-  return <main className="h-screen "></main>;
+  return <main className="">ayam goreng</main>;
 };
 
 export default Home;
