@@ -19,7 +19,14 @@ const ProductCard: FC<CardProps> = ({ product }) => {
   return (
     <div className="w-full h-auto rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.03] hover:shadow-xl border-gray-100 bg-white">
       {/* Image */}
-      <div className="relative w-full aspect-[4/3] ">
+      <div className="relative w-full aspect-[4/3]">
+        {/* Category Badge */}
+        <div className="absolute top-3 left-3 z-10">
+          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full border border-blue-200">
+            {product.category}
+          </span>
+        </div>
+
         <Image
           src={product.path}
           alt={product.title}
