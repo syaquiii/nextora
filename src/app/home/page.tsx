@@ -5,7 +5,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <main className="">
+    <main className="overflow-x-hidden">
       <HeroContainer />
       <ProductInfoContainer />
       <ProductListContainer />
