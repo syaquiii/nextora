@@ -58,12 +58,12 @@ const ProductDetail = ({ product }: Props) => {
             <p className="text-sm text-gray-600">
               <strong>Category:</strong> {product.category}
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm flex items-center gap-2 text-gray-600">
               <strong>Colors:</strong>{" "}
               {product.colors.map((color, idx) => (
                 <span
                   key={idx}
-                  className="inline-block w-4 h-4 rounded-full mr-2 border"
+                  className="inline-block w-16 h-4 rounded-md mr-2 border"
                   style={{ backgroundColor: color }}
                 ></span>
               ))}
@@ -71,7 +71,7 @@ const ProductDetail = ({ product }: Props) => {
           </div>
 
           {/* Add to Cart Button */}
-          <button className=" hover:bg-gray-800 border border-black text-black hover:text-white text-sm font-medium rounded-xl px-6 py-3 flex items-center gap-3 transition-colors">
+          <button className=" hover:bg-gray-800 border w-full cursor-pointer border-black text-black hover:text-white text-sm font-medium rounded-xl px-6 py-3 flex items-center justify-center lg:w-fit gap-3 transition-colors">
             <ShoppingCart size={18} />
             Add To Cart
           </button>
@@ -82,7 +82,9 @@ const ProductDetail = ({ product }: Props) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {similarProducts.length > 0 ? (
             similarProducts.map((item) => (
-              <ProductCard key={item.id} product={item} />
+              <Link key={item.id} href={`/shop/${item.id}`}>
+                <ProductCard product={item} />
+              </Link>
             ))
           ) : (
             <p className="text-gray-500">No similar products found.</p>
