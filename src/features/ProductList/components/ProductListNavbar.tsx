@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 
-type TabType = "TREND" | "NEW";
-
 interface Props {
   activeTab: "TREND" | "NEW";
   onChange: (tab: "TREND" | "NEW") => void;
