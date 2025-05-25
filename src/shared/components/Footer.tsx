@@ -44,7 +44,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Copyright Section */}
+        {/* Copyright Section  */}
         <div className="mt-12 sm:mt-16 lg:mt-20 pt-6 sm:pt-8">
           <p className=" text-xs sm:text-sm">
             © {new Date().getFullYear()} Nextora. All rights reserved.
