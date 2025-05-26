@@ -1,10 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { navlinks } from "../data/navlink";
 import { Navlist } from "./Navlist";
 import Link from "next/link";
-import { Heart, ShoppingCart, User } from "lucide-react";
-import Hamburger from "hamburger-react";
+import { Heart, ShoppingCart, User, Search } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,47 +45,30 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Navbar */}
-      <nav className="bg-primary-600 lg:hidden w-full font-sfpro text-white relative">
+      {/* Mobile Top Bar - Simplified */}
+      <nav className="bg-primary-600 lg:hidden w-full font-sfpro text-white">
         <div className="mycontainer flex py-4 items-center justify-between">
-          <div className="flex gap-4 items-center">
-            {/* Left side - Hamburger */}
-            <Hamburger toggled={isOpen} toggle={toggleMenu} size={20} />
-            {/* Center - Brand */}
-            <h1 className="text-xl font-bold">Nextora.</h1>
-          </div>
+          {/* Left - Brand */}
+          <h1 className="text-xl font-bold">Nextora.</h1>
 
-          {/* Right side - Icons */}
-          <div className="flex gap-4">
-            <Link href={"/wishlist"}>
-              <Heart size={20} />
+          {/* Right - Search and Cart */}
+          <div className="flex gap-4 items-center">
+            <Link href={"/search"}>
+              <Search size={20} />
             </Link>
-            <Link href={"/cart"}>
+            <Link href={"/cart"} className="relative">
               <ShoppingCart size={20} />
-            </Link>
-            <Link href={"/profile"}>
-              <User size={20} />
+              {/* Cart badge - optional */}
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                3
+              </span>
             </Link>
           </div>
         </div>
-
-        {/* Mobile Menu Dropdown */}
-        {isOpen && (
-          <div className="absolute top-full left-0 right-0 bg-primary-600 border-t border-primary-500 shadow-lg z-50">
-            <div className="mycontainer py-4">
-              <ul className="flex flex-col gap-4">
-                {navlinks.map((props) => (
-                  <Link key={props.id} href={props.path} onClick={closeMenu}>
-                    <Navlist props={props} />
-                  </Link>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
       </nav>
 
-      {/* Backdrop/Overlay untuk mobile */}
+      {/* Add padding bottom to prevent content from being hidden behind bottom nav */}
+      <div className="lg:hidden h-16"></div>
     </>
   );
 };
