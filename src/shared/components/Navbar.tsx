@@ -1,21 +1,10 @@
 "use client";
-import { useState } from "react";
 import { navlinks } from "../data/navlink";
 import { Navlist } from "./Navlist";
 import Link from "next/link";
 import { Heart, ShoppingCart, User, Search } from "lucide-react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
     <>
       {/* Desktop Navbar */}
