@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="bg-primary-600 hidden lg:block w-full font-sfpro text-white">
+      <nav className="bg-primary-600 hidden lg:block w-full font-sfpro text-white fixed top-0 left-0 right-0 z-50">
         <div className="mycontainer flex py-6 items-center justify-between">
           <div className="flex gap-20 items-center">
             <h1 className="text-2xl font-bold">Nextora.</h1>
@@ -35,7 +35,8 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Top Bar - Simplified */}
-      <nav className="bg-primary-600 lg:hidden w-full font-sfpro text-white">
+      <nav className="bg-primary-600 lg:hidden w-full font-sfpro text-white sticky top-0 z-50">
+        {" "}
         <div className="mycontainer flex py-4 items-center justify-between">
           {/* Left - Brand */}
           <h1 className="text-xl font-bold">Nextora.</h1>
@@ -57,7 +58,6 @@ const Navbar = () => {
       </nav>
 
       {/* Add padding bottom to prevent content from being hidden behind bottom nav */}
-      <div className="lg:hidden h-16"></div>
     </>
   );
 };
