@@ -61,7 +61,7 @@ const FlashSale: React.FC = () => {
             <div className="text-xl font-bold text-red-400">
               ⏰ Sale Expired!
             </div>
-            <div className="text-lg">Don't miss our next amazing offer!</div>
+            <div className="text-lg">Dont miss our next amazing offer!</div>
           </div>
         )}
 
