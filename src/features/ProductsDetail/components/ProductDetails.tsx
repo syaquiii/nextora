@@ -16,7 +16,7 @@ const ProductDetail = ({ product }: Props) => {
   const similarProducts = useSimilarProducts(product.category, product.id);
 
   return (
-    <div className="mycontainer font-sfpro py-10 px-4 md:px-10">
+    <div className="mycontainer font-sfpro py-40 px-4 md:px-10">
       <Link
         href="/home"
         className="inline-block mb-6 text-sm text-gray-600 hover:text-black border-b border-black pb-1"

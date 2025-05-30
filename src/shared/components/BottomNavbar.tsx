@@ -7,7 +7,7 @@ const navlinks = [
   { id: 1, title: "Home", path: "/home", icon: Home },
   { id: 2, title: "Shop", path: "/shop", icon: Grid3X3 },
   { id: 3, title: "Favorite", path: "/favorite", icon: Heart },
-  { id: 4, title: "Profile", path: "/profile", icon: User }, // Added Profile tab
+  { id: 4, title: "Profile", path: "/profile", icon: User },
 ];
 
 const BottomNavbar = () => {

@@ -28,6 +28,11 @@ const ProductListLayout: FC<ProductListLayoutProps> = ({
           </Link>
         ))}
       </div>
+      <div className="w-full flex justify-center my-10">
+        <button className="bg-primary-600 rounded-lg text-xl px-4 py-2 text-white">
+          Show All
+        </button>
+      </div>
     </section>
   );
 };
