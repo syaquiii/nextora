@@ -12,23 +12,7 @@ interface DiscountProductCardProps {
 const DiscountProductCard: React.FC<DiscountProductCardProps> = ({
   product,
   calculateSavings,
-  formatCurrency,
 }) => {
-  const savings = calculateSavings(product.originalPrice, product.price);
-
-  const getColorStyle = (color: string): React.CSSProperties => {
-    const colorMap: Record<string, string> = {
-      beige: "#F5F5DC",
-      "walnut brown": "#8B4513",
-      glass: "#E6E6FA",
-      charcoal: "#36454F",
-    };
-
-    return {
-      backgroundColor: colorMap[color] || color,
-    };
-  };
-
   const handleImageError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
