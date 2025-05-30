@@ -14,7 +14,7 @@ const ProductDiscountContainer: React.FC = () => {
   } = useDiscountProducts();
 
   return (
-    <section className="min-h-screen w-full ">
+    <section className="min-h-screen w-full  -mt-40">
       <div className="container mx-auto px-4 py-8">
         <DiscountProductLayout
           discountProducts={discountProducts}
