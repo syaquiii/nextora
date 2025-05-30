@@ -11,7 +11,6 @@ interface DiscountProductCardProps {
 
 const DiscountProductCard: React.FC<DiscountProductCardProps> = ({
   product,
-  calculateSavings,
 }) => {
   const handleImageError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>
