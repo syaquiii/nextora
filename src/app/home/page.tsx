@@ -1,3 +1,4 @@
+import BlogContainer from "@/features/Blog/container/BlogContainer";
 import FlashSaleContainer from "@/features/FlashSale/container/FlashSaleContainer";
 import HeroContainer from "@/features/Hero/container/HeroContainer";
 import ProductDiscountContainer from "@/features/ProductDIscount/container/ProductDiscountContainer";
@@ -17,6 +18,7 @@ const Home = () => {
       <FlashSaleContainer />
       <ProductDiscountContainer />
       <TestimoniContainer />
+      <BlogContainer />
     </main>
   );
 };
