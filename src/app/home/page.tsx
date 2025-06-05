@@ -4,6 +4,7 @@ import ProductDiscountContainer from "@/features/ProductDIscount/container/Produ
 import ProductInfoContainer from "@/features/ProductInfo/container/ProductInfoContainer";
 import ProductListContainer from "@/features/ProductList/container/ProductListContainer";
 import SpecialPriceContainer from "@/features/SpecialPrice/container/SpecialPriceContainer";
+import TestimoniContainer from "@/features/Testimoni/container/TestimoniContainer";
 import React from "react";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <SpecialPriceContainer />
       <FlashSaleContainer />
       <ProductDiscountContainer />
+      <TestimoniContainer />
     </main>
   );
 };
